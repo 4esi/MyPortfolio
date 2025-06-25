@@ -87,6 +87,16 @@ a {
     text-shadow: 1px 1px 1px black;
 }
 
+html body #Contact .terminal.maximizeTerminal {
+    position: fixed;
+    width: 99vw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
 /******Buttons******/
 
 header .menuBtn {
@@ -126,7 +136,7 @@ nav {
     top: 0;
     width: 100vw;
     height: 3rem;
-    transition: box-shadow 0.25s;
+    transition: all 0.25s;
     z-index: 3;
 }
 
