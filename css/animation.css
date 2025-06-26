@@ -1,0 +1,29 @@
+
+/******Colors******/
+
+:root {
+    --background: #1e1e1e;
+    --terminal: #1e1e1eb4;
+    --navBackground: #252526;
+    --function: #dcdcaa;
+    --bracket: #d4d4d4;
+    --text: #ce9178;
+    --branching: #c586c0;
+    --designation: #264F78;
+    --clicked: #3A3D41;
+    --availability: #4ec9b0;
+}
+
+/******Home-Section******/
+
+@keyframes arrowAnim {
+    form {background-color: var(--navBackground);}
+    to {background-color: var(--clicked);}
+}
+
+#Home a {
+    animation-name: arrowAnim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}

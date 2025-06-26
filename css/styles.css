@@ -74,7 +74,7 @@
 }
 
 p.text {
-    padding-left: 2rem;
+    padding: 2rem 0 2rem 2rem;
 }
 
 .title {
@@ -97,32 +97,54 @@ html body #Contact .terminal.maximizeTerminal {
     transition: all 0.3s;
 }
 
+button {
+    outline: none;
+    border: 1px solid white;
+    transition: all .4s;
+}
+
 /******Buttons******/
 
 header .menuBtn {
     position: fixed;
-    left: 2rem;
+    left: 1rem;
     top: 2rem;
 }
 
 header .terminalBtn {
     position: fixed;
-    left: 2rem;
+    left: 1rem;
     top: 6rem;
 }
 
 header button {
     width: 3rem;
     height: 3rem;
-    border-radius: 20%;
+    border-radius: 15px;
     z-index: 4;
-    background-color: transparent;
+    background-color: var(--navBackground);
     transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header button:hover {
+button:hover {
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+button:focus, a:focus {
     background-color: var(--navBackground);
+}
+
+button:active, a:active {
+    background-color: var(--text);
+}
+
+header .menuBtn svg, header .terminalBtn svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 /******Nav-Section******/
@@ -175,8 +197,12 @@ nav ul li a:active {
 
 /******Home-Section******/
 
+#Home {
+    padding-top: 10vh;
+}
+
 #Home .imageBox {
-    padding-top: 3rem;
+
     padding-bottom: 1rem;
 }
 
@@ -204,6 +230,18 @@ nav ul li a:active {
 
 .titleBox h1 {
     font-size: 1.4rem;
+}
+
+#Home a {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+#Home a svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 /******AboutMe-Section******/
@@ -282,13 +320,12 @@ nav ul li a:active {
     text-shadow: 1px 1px 1px black;
     padding: .4rem .8rem;
     border-radius: 13px;
-    background-color: transparent;
+    background-color: var(--navBackground);
     transition: all .3s;
 }
 
-.works button:hover {
-    cursor: pointer;
-    background-color: var(--navBackground);
+.works button:active {
+    background-color: var(--text);
 }
 
 /******Contact-Section******/
@@ -296,6 +333,10 @@ nav ul li a:active {
 #Contact ul {
     list-style: none;
     padding: 2rem 0 0 2rem;
+}
+
+#Contact ul li {
+    margin: 2rem 0;
 }
 
 #Contact ul li a {
@@ -316,12 +357,13 @@ nav ul li a:active {
     border: 1px solid var(--clicked);
     border-radius: 10px;
     width: 50%;
-    height: 60%;
+    height: 80%;
     position: fixed;
     left: 25%;
-    top: 25%;
+    top: 10%;
     overflow: hidden;
     transition: all 0.3s;
+    z-index: 4;
 }
 
 .terminal h4 {
@@ -358,6 +400,11 @@ nav ul li a:active {
 }
 #Contact .terminal .topSide .minimizeBtn svg {
     margin-bottom: .6rem;
+}
+
+#Contact .topSide button:focus {
+    background-color: inherit;
+    box-shadow: none;
 }
 
 #Contact .topSide button:hover {
@@ -415,13 +462,18 @@ form {
 }
 
 #Contact .sendBtn {
-    border-radius: 20%;
+    border-radius: 15px;
     z-index: 4;
-    margin: .5rem 0 0 48%;
-    background-color: transparent;
+    margin: .5rem 0 0 4px;
+    background-color: var(--navBackground);
     transition: all .3s;
-    width: 3rem;
+    width: 6rem;
     height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    color: var(--designation);
 }
 
 #Contact .sendBtn:hover {

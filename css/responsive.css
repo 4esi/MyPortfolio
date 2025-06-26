@@ -32,3 +32,65 @@
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 480px) {
+
+    .titleBox h2, .titleBox h3 {
+        font-size: 1rem;
+    }
+
+    .titleBox h1 {
+        font-size: 1.2rem;
+    }
+
+    #AboutMe, #MyWorks, #MySkills, #Contact {
+        padding: 1rem;
+    }
+
+    p.text {
+        padding-left: 1rem;
+    }
+
+    #MySkills .if {
+        padding-left: 1rem;
+    }
+
+    #MySkills .elseif {
+        padding-left: 2rem;
+    }
+
+    #MySkills .else {
+        padding-left: 3rem;
+    }
+
+    .functionText:not(nav .functionText) {
+        font-size: 1rem;
+    }
+
+    .works {
+        padding-left: 0;
+    }
+
+    .workBoxes {
+        padding-top: 3rem;
+    }
+
+    #MyWorks h2.title {
+        padding-left: 1rem;
+    }
+
+    .works .bracket:nth-child(3) {
+        padding-left: 1rem;
+    }
+
+    #Contact ul {
+        padding-left: 1rem;
+    }
+
+    #Contact .terminal {
+        width: 90%;
+        height: 70%;
+        left: 5%;
+        top: 15%;
+    }
+}
