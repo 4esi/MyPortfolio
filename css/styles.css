@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    user-select: none;
+}
+
+html {
     font-size: 16px;
     font-family: monospace;
 }
@@ -57,6 +59,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .imageBox img {
     width: 17rem;
     border-radius: 150px;
@@ -160,6 +163,7 @@ nav {
     height: 3rem;
     transition: all 0.25s;
     z-index: 3;
+    opacity: 0;
 }
 
 nav:hover {
@@ -198,11 +202,12 @@ nav ul li a:active {
 /******Home-Section******/
 
 #Home {
-    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #Home .imageBox {
-
     padding-bottom: 1rem;
 }
 
@@ -226,22 +231,28 @@ nav ul li a:active {
 
 .titleBox h2, .titleBox h3 {
     font-size: 1.1rem;
+    white-space: nowrap;
 }
 
 .titleBox h1 {
     font-size: 1.4rem;
+    white-space: nowrap;
 }
 
 #Home a {
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 10px;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #Home a svg {
     width: 2rem;
     height: 2rem;
+}
+
+#Home img {
+    opacity: 0;
 }
 
 /******AboutMe-Section******/
@@ -260,6 +271,7 @@ nav ul li a:active {
     display: flex;
     justify-content: end;
     align-items: center;
+    opacity: 0;
 }
 
 /******MySkills-Section******/
@@ -290,10 +302,12 @@ nav ul li a:active {
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem;
+    padding: 4rem 0;
 }
 
 #MyWorks .workBox {
     width: 16rem;
+    opacity: 0;
     height: 12rem;
     background-color: var(--navBackground);
     border-radius: 20px;
@@ -337,6 +351,7 @@ nav ul li a:active {
 
 #Contact ul li {
     margin: 2rem 0;
+    transform: translateX(-50%);
 }
 
 #Contact ul li a {

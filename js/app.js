@@ -40,13 +40,15 @@ const DomItems = {
     closeBtn: document.querySelector('.closeBtn'),
     nav: document.querySelector('nav'),
     terminal: document.querySelector('.terminal'),
-    letter: document.querySelector('#Letter')
+    letter: document.querySelector('#Letter'),
+    aboutmeImage: document.querySelector('.aboutmeImage'),
+    workBox: document.querySelectorAll('.workBox')
 }
 
 //Window resize monitoring
 
 function checkScreenSize() {
-    if(window,innerWidth <= 768) {
+    if(window.innerWidth <= 768) {
         DomItems.nav.classList.add('hidden');
         DomItems.menuBtn.classList.remove('hidden');
     } else {
@@ -59,42 +61,56 @@ window.addEventListener("resize", checkScreenSize);
 window.addEventListener("DOMContentLoaded", checkScreenSize);
 
 //Button event listeners
-
-DomItems.menuBtn.addEventListener('click', () => {
+if(DomItems.menuBtn) {
+    DomItems.menuBtn.addEventListener('click', () => {
     DomItems.nav.classList.toggle('hidden');
-})
+    })
+}
 
-DomItems.terminalOpenBtn.addEventListener('click', () => {
+if(DomItems.terminalOpenBtn) {
+    DomItems.terminalOpenBtn.addEventListener('click', () => {
     console.log('katt');
     DomItems.terminal.classList.remove('hidden');
-})
+    })
+}
 
-DomItems.closeBtn.addEventListener('click', () => {
+if(DomItems.closeBtn) {
+    DomItems.closeBtn.addEventListener('click', () => {
     DomItems.terminal.classList.add('hidden');
     DomItems.terminalBtn.classList.add('hidden');
     DomItems.terminal.classList.remove('maximizeTerminal');
-})
+    })
+}
 
-DomItems.minimizeBtn.addEventListener('click', () => {
+if(DomItems.minimizeBtn) {
+    DomItems.minimizeBtn.addEventListener('click', () => {
     DomItems.terminal.classList.add('hidden');
     DomItems.terminalBtn.classList.remove('hidden');
     DomItems.terminal.classList.remove('maximizeTerminal');
-})
+    })
+}
 
-DomItems.terminalBtn.addEventListener('click', () => {
+if(DomItems.terminalBtn) {
+    DomItems.terminalBtn.addEventListener('click', () => {
     DomItems.terminal.classList.remove('hidden');
-})
+    })
+}
 
-DomItems.maximizeBtn.addEventListener('click', () => {
+if(DomItems.maximizeBtn) {
+    DomItems.maximizeBtn.addEventListener('click', () => {
     DomItems.terminal.classList.toggle('maximizeTerminal');
-})
+    })
+}
 
 //Resize letter textarea
 
-DomItems.letter.addEventListener('input', function() {
+if(DomItems.letter) {
+    DomItems.letter.addEventListener('input', function() {
     this.style.height = 'auto';
     this.style.height = this.scrollHeight + 'px';
-})
+    })
+}
+
 
 //WhatsApp
 
@@ -109,3 +125,39 @@ const user = "zsoltnegyesi4";
 const domain = "gmail.com";
 const gmailHref = "mailto:" + user + "@" + domain;
 document.getElementById('gmailLink').setAttribute('href', gmailHref);
+
+//Animation
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('cleared');
+        } else {
+            entry.target.classList.remove('cleared');
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+if(DomItems.aboutmeImage) {
+    observer.observe(DomItems.aboutmeImage);
+}
+
+DomItems.workBox.forEach(box => observer.observe(box));
+
+const contactItems = document.querySelectorAll('#Contact ul li');
+
+const observerr = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animated');
+    } else {
+      entry.target.classList.remove('animated');
+    }
+  });
+}, {
+  threshold: 0.4
+});
+
+contactItems.forEach(item => observerr.observe(item));

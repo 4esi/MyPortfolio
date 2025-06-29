@@ -24,10 +24,6 @@
         box-shadow: rgba(0, 0, 0, 0.45) 25px 0px 20px -20px;
     }
 
-    nav:hover {
-        box-shadow: rgba(0, 0, 0, 0.45) 25px 0px 20px -20px;
-    }
-
     nav ul {
         flex-wrap: wrap;
     }
@@ -92,5 +88,9 @@
         height: 70%;
         left: 5%;
         top: 15%;
+    }
+
+    #Home img {
+        width: 15rem;
     }
 }

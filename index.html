@@ -15,7 +15,7 @@
 
         <!--*****Nav-Section*****-->
 
-        <nav>
+        <nav role="navigation">
             <ul>
                 <li>
                     <a href="#Home" class="functionText">
@@ -56,17 +56,19 @@
         <!--*****Home-Section*****-->
 
         <section id="Home">
-            <article class="imageBox">
-                <img src="./assets/images/i.png" alt="Profile picture of Zsolt Negyesi">
-            </article>
-            <article class="titleBox">
-                <h2>Hello, I'm Zsolt Negyesi.</h2>
-                <h1>Frontend Web Developer</h1>
-                <h3>Scroll down and learn more about me</h3>
-                <a href="#AboutMe">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d4d4d4"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </a>
-            </article>
+            <div>
+                <article class="imageBox">
+                    <img src="./assets/images/i.png" alt="Profile picture of Zsolt Negyesi">
+                </article>
+                <article class="titleBox">
+                    <h2>Hello, I'm Zsolt Negyesi.</h2>
+                    <h1>Frontend Web Developer</h1>
+                    <h3>Scroll down and learn more about me</h3>
+                    <a href="#AboutMe">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d4d4d4"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </a>
+                </article>
+            </div>
         </section>
 
         <!--*****AboutMe-Section*****-->
@@ -93,7 +95,7 @@
                 </p>
                 <div class="bracket">&#125;</div>
             </article>
-            <article class="imageBox">
+            <article class="imageBox aboutmeImage">
                 <img src="./assets/images/i.png" alt="Profile picture of Zsolt Negyesi">
             </article>
         </section>
@@ -164,7 +166,10 @@
                 <span class="bracket">()</span>
                 <span class="bracket">&#123;</span>
             </h2>
-            <article class="works">
+
+            <!--*****Website-Article*****-->
+
+            <article class="works website">
                 <h2 class="title">
                     Website
                     <span class="bracket">&#123;</span>
@@ -189,7 +194,38 @@
                 </div>
                 <div class="bracket">&#125;,</div>
             </article>
-            <article class="works">
+
+            <!--*****WebApplication-Article*****-->
+
+            <article class="works webApplication">
+                <h2 class="title">
+                    WebApplication
+                    <span class="bracket">&#123;</span>
+                </h2>
+                <div class="workBoxes">
+                    <div class="workBox">
+                            <img src="./assets/images/projectPic.jpg" alt="">
+                            <a class="workLinks" href="#">%title%</a>
+                    </div>
+                    <div class="workBox">
+                            <img src="./assets/images/projectPic.jpg" alt="">
+                            <a class="workLinks" href="#">%title%</a>
+                    </div>
+                    <div class="workBox">
+                            <img src="./assets/images/projectPic.jpg" alt="">
+                            <a class="workLinks" href="#">%title%</a>
+                    </div>
+                    <button class="expandBtn">
+                        Expand
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d4d4d4"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                </div>
+                <div class="bracket">&#125;,</div>
+            </article>
+
+            <!--*****Design-Article*****-->
+
+            <article class="works design">
                 <h2 class="title">
                     Design
                     <span class="bracket">&#123;</span>
